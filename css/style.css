@@ -1,0 +1,171 @@
+/*
+		
+			-----COLOR REFERENCES-----
+				Light Blue: #A3ECFF
+				Medium Blue: #7BD0E5
+				Dark Blue: #469DB2
+				Light Brown: #FFC289
+				Dark Brown: #B2753C
+
+*/
+
+/*=======================================================FONTS=======================================================*/
+
+@font-face {
+	font-family: Impossible;
+	src: url('../fonts/Impossible.ttf');
+}
+
+@font-face {
+	font-family: Impossible Bold;
+	src: url('../fonts/ImpossibleBold.ttf');
+}
+
+@font-face {
+	font-family: What a Mess;
+	src: url('../fonts/WhatAMess.ttf');
+}
+
+/*=======================================================UNIVERSAL=======================================================*/
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #469DB2;
+	
+	background-image: -ms-linear-gradient(top, #A3ECFF 0%, #7BD0E5 40%, #FFC289 60%, #B2753C 70%, #469DB2 100%); /* IE10 Consumer Preview */ 
+	background-image: -moz-linear-gradient(top, #A3ECFF 0%, #7BD0E5 40%, #FFC289 60%, #B2753C 70%, #469DB2 100%); /* Mozilla Firefox */ 
+	background-image: -o-linear-gradient(top, #A3ECFF 0%, #7BD0E5 40%, #FFC289 60%, #B2753C 70%, #469DB2 100%); /* Opera */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #A3ECFF), color-stop(0.4, #7BD0E5), color-stop(0.6, #FFC289), color-stop(0.7, #B2753C), color-stop(1, #469DB2)); /* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-linear-gradient(top, #A3ECFF 0%, #7BD0E5 40%, #FFC289 60%, #B2753C 70%, #469DB2 100%); /* Webkit (Chrome 11+) */
+	background-image: linear-gradient(to bottom, #A3ECFF 0%, #7BD0E5 40%, #FFC289 60%, #B2753C 70%, #469DB2 100%); /* W3C Markup, IE10 Release Preview */
+}
+
+#container {
+	width: 80%;
+	margin: auto;
+	box-shadow: 0px 0px 30px #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #7BD0E5;
+	
+	background-image: -ms-linear-gradient(top, #EFEFEF 0%, #7BD0E5 60%); /* IE10 Consumer Preview */ 
+	background-image: -moz-linear-gradient(top, #EFEFEF 0%, #7BD0E5 60%); /* Mozilla Firefox */ 
+	background-image: -o-linear-gradient(top, #EFEFEF 0%, #7BD0E5 60%); /* Opera */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EFEFEF), color-stop(.6, #7BD0E5)); /* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-linear-gradient(top, #EFEFEF 0%, #7BD0E5 60%); /* Webkit (Chrome 11+) */ 
+	background-image: linear-gradient(to bottom, #EFEFEF 0%, #7BD0E5 60%); /* W3C Markup, IE10 Release Preview */ 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: What a Mess, "Arial Black", Gadget, sans-serif;
+}
+
+h1 {
+	font-family: Impossible Bold, "Arial Black", Gadget, sans-serif;
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 25px;
+}
+
+h5 {
+	font-size: 23px;
+}
+
+h6 {
+	font-family: Impossible, "Arial Black", Gadget, sans-serif;
+	font-size: 21px;
+}
+
+ul {
+	margin: 10px 40px;
+	list-style-type: square;
+}
+
+/*=======================================================HEADER=======================================================*/
+
+header {
+	text-align: center;
+	padding: 20px;
+}
+
+/*=======================================================SEARCH=======================================================*/
+
+#searchDiv {
+	text-align: right;
+}
+
+input {
+	box-shadow: 0px 0px 8px #000;
+	border: none;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px 20px;
+	width: 150px;
+	margin: 20px auto;
+}
+
+.button {
+	cursor: pointer;
+	font-weight: bold;
+	font-family: What a Mess, "Arial Black", Gadget, sans-serif;
+	font-size: 18px;
+	padding: 5px 20px;
+	margin: 10px;
+	background: #FFC289;
+	border: 2px groove #B2753C;
+	width: 100px;
+	display: inline;
+	text-align: center;
+	margin: 20px;
+} .button:hover {
+	box-shadow: 3px 3px 5px #B2753C;
+}
+
+/*=======================================================MAIN=======================================================*/
+
+#main {
+	padding: 20px 40px;
+}
+
+/*=======================================================PLAYLIST=======================================================*/
+
+#playlist {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+	border-radius: 9px;
+	border: 3px double #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	background-image: -ms-linear-gradient(bottom left, #efefef 0%, #469DB2 50%);
+	background-image: -moz-linear-gradient(bottom left, #efefef 0%, #469DB2 50%);
+	background-image: -o-linear-gradient(bottom left, #efefef 0%, #469DB2 50%);
+	background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #efefef), color-stop(.5, #469DB2));
+	background-image: -webkit-linear-gradient(bottom left, #efefef 0%, #469DB2 50%);
+	background-image: linear-gradient(to top right, #efefef 0%, #469DB2 50%);
+}
+
+/*=======================================================FOOTER=======================================================*/
+
+footer {
+	clear: both;
+	text-align: center;
+	font-size: 17px;
+	font-family: What a Mess, "Arial Black", Gadget, sans-serif;
+	padding: 20px 0px;
+}
