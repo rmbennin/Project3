@@ -69,14 +69,15 @@ h1 {
 }
 
 h2 {
-	font-size: 40px;
+	font-size: 45px;
 }
 
 h3 {
-	font-size: 30px;
+	font-size: 35px;
 }
 
 h4 {
+	font-family: Impossible Bold, "Arial Black", Gadget, sans-serif;
 	font-size: 25px;
 }
 
@@ -97,14 +98,15 @@ ul {
 /*=======================================================HEADER=======================================================*/
 
 header {
-	text-align: center;
+	text-align: left;
 	padding: 20px;
+	overflow: hidden;
+	box-shadow: 0px 5px 20px #000;
 }
 
-/*=======================================================SEARCH=======================================================*/
-
 #searchDiv {
-	text-align: right;
+	margin-top: -75px;
+	float: right;
 }
 
 input {
@@ -113,7 +115,7 @@ input {
 	text-align: center;
 	font-weight: bold;
 	padding: 10px 20px;
-	width: 150px;
+	width: 200px;
 	margin: 20px auto;
 }
 
@@ -122,10 +124,11 @@ input {
 	font-weight: bold;
 	font-family: What a Mess, "Arial Black", Gadget, sans-serif;
 	font-size: 18px;
-	padding: 5px 20px;
+	padding: 5px 40px;
 	margin: 10px;
 	background: #FFC289;
 	border: 2px groove #B2753C;
+	border-radius: 30px;
 	width: 100px;
 	display: inline;
 	text-align: center;
@@ -134,30 +137,129 @@ input {
 	box-shadow: 3px 3px 5px #B2753C;
 }
 
+/*=======================================================NOW PLAYING=======================================================*/
+
+#nowPlaying {
+	padding: 15px;
+	text-align: left;
+}
+
+#nowPlaying h4 {
+	display: inline;
+	text-shadow: 1px 1px 2px #000;
+}
+
+#nowPlaying span {
+	padding-left: 15px;
+	font-family: Impossible, Arial, Gadget, sans-serif;
+	font-size: 20px;
+}
+
+#nowPlaying div {
+	padding-top: 15px;
+}
+
+#position {
+	width: 100%;
+}
+
+/*=======================================================NAVIGATION=======================================================*/
+
+#navigation {
+	border-top: 3px double #000;
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+	width: auto;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#navigation ul {
+	background: #333333;
+	height: 35px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation li {
+	float: left;
+	padding: 0px;
+	background: #333333;
+	display: block;
+	line-height: 35px;
+	margin: 0px;
+	padding: 0px 25px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+	color: #efefef;
+}
+
+#navigation li:hover {
+	background: #469DB2;
+	color: #000;
+	box-shadow: 0px 5px 10px #000;
+}
+
 /*=======================================================MAIN=======================================================*/
 
 #main {
-	padding: 20px 40px;
+	padding: 40px;
+	border-top: 3px double #333;
+	border-bottom: 3px double #333;
+}
+
+#searchResults li {
+	padding: 14px;
+	cursor: pointer;
+} #searchResults li:hover {
+	text-shadow: 0px 0px 6px #000;
 }
 
 /*=======================================================PLAYLIST=======================================================*/
 
 #playlist {
-	width: 50%;
-	margin: auto;
-	text-align: center;
-	padding: 20px;
-	border-radius: 9px;
-	border: 3px double #000;
-	background-repeat: no-repeat;
-	background-size: cover;
+	width: 80%;
+	margin: 20px auto;
+	padding: 20px 0px;
+	color: #ececec;
+	border-radius: 15px;
+	box-shadow: 0px 0px 40px #000;
 	
-	background-image: -ms-linear-gradient(bottom left, #efefef 0%, #469DB2 50%);
-	background-image: -moz-linear-gradient(bottom left, #efefef 0%, #469DB2 50%);
-	background-image: -o-linear-gradient(bottom left, #efefef 0%, #469DB2 50%);
-	background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #efefef), color-stop(.5, #469DB2));
-	background-image: -webkit-linear-gradient(bottom left, #efefef 0%, #469DB2 50%);
-	background-image: linear-gradient(to top right, #efefef 0%, #469DB2 50%);
+	background: url(../assets/transparent-background.png);
+	background-size: cover;
+	background-position: center;
+}
+
+#playlist h3 {
+	border-bottom: 4px solid #000;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	text-align: center;
+	text-shadow: 5px 5px 10px #000;
+}
+
+#playlist ul {
+	list-style-type: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#playlist li {
+	padding: 15px;
+	border-bottom: 1px solid transparent;
+}
+
+#playlist li:hover {
+	border-bottom: 1px solid #000;
+}
+
+#playlist li:nth-child(2) {
+	border-bottom: 1px solid #000;
 }
 
 /*=======================================================FOOTER=======================================================*/
@@ -167,5 +269,10 @@ footer {
 	text-align: center;
 	font-size: 17px;
 	font-family: What a Mess, "Arial Black", Gadget, sans-serif;
-	padding: 20px 0px;
+	padding: 10px 0px;
+	background: #469DB2;
+	
+	background: url(../assets/playlistBackground.jpg);
+	background-size: cover;
+	background-position: center;
 }
