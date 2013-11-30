@@ -211,11 +211,78 @@ input {
 	border-bottom: 3px double #333;
 }
 
-#searchResults li {
+#searchResults div {
 	padding: 14px;
+	margin: 15px;
+	clear: both;
+	overflow: hidden;
+	border: 3px double #AAA;
+	border-radius: 12px;
+} #searchResults div:hover {
+	box-shadow: 0px 0px 6px #000;
+	border-color: #000;
+}
+
+#searchResults img {
+	float: left;
+}
+
+#searchResults p {
+	margin: 7px 0px 0px 120px;
+}
+
+#searchResults .trackTitle {
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 16px;
+}
+
+.trackDescription {
+	margin-top: 5px;
+	font-style: italic;
+	width: 70%;
+}
+
+.trackGenre, .trackDuration {
+	float: right;
+}
+
+.trackGenre {
+	font-weight: bold;
+}
+
+.trackDuration {
+	margin-top: 5px;
+}
+
+#searchResults span {
+	display: block;
+}
+
+#searchResults button {
+	margin-top: 25px;
+	padding: 7px 35px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	border-radius: 10px;
 	cursor: pointer;
-} #searchResults li:hover {
-	text-shadow: 0px 0px 6px #000;
+	border: 0px;
+	box-shadow: 3px 3px 10px #000;
+	float: right;
+	
+	background-image: -ms-linear-gradient(top, #FFC289 0%, #B2753C 70%); /* IE10 Consumer Preview */ 
+	background-image: -moz-linear-gradient(top, #FFC289 0%, #B2753C 70%); /* Mozilla Firefox */ 
+	background-image: -o-linear-gradient(top, #FFC289 0%, #B2753C 70%); /* Opera */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFC289), color-stop(.7, #B2753C)); /* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-linear-gradient(top, #FFC289 0%, #B2753C 70%); /* Webkit (Chrome 11+) */ 
+	background-image: linear-gradient(to bottom, #FFC289 0%, #B2753C 70%); /* W3C Markup, IE10 Release Preview */ 
+} #searchResults button:hover, #searchResults button:focus {
+	box-shadow: 3px 3px 5px #000;
+	
+	background-image: -ms-linear-gradient(top, #F1E3B0 0%, #B2753C 70%); /* IE10 Consumer Preview */ 
+	background-image: -moz-linear-gradient(top, #F1E3B0 0%, #B2753C 70%); /* Mozilla Firefox */ 
+	background-image: -o-linear-gradient(top, #F1E3B0 0%, #B2753C 70%); /* Opera */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F1E3B0), color-stop(.7, #B2753C)); /* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-linear-gradient(top, #F1E3B0 0%, #B2753C 70%); /* Webkit (Chrome 11+) */ 
+	background-image: linear-gradient(to bottom, #F1E3B0 0%, #B2753C 70%); /* W3C Markup, IE10 Release Preview */ 
 }
 
 /*=======================================================PLAYLIST=======================================================*/
