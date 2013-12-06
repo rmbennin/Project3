@@ -3,7 +3,6 @@
 	
 	//class-like object
 	var Jukebox = function(playlistRef, positionRef, SC){
-		
 		//store a reference to this object
 		var me = this;
 		
@@ -13,8 +12,7 @@
 		this.playlist = $(playlistRef);
 		this.sc = SC;
 		
-		this.playlist.on("click", "div", function(event){
-					
+		this.playlist.on("click", "button", function(event){
 			var clickedElement = $(event.target);
 			
 			//update what is currently playing
@@ -22,41 +20,36 @@
 			
 			//get the associated track of the clicked element
 			var trackID = clickedElement.data("trackID");
-				
-			console.log(trackID);
-						
-			//show the track title for "now playing"
-			$("#txtNow").html(clickedElement.html());
+			
+			SC.get("/tracks/" + trackID, function(track){				
+				//show the track title for "now playing"
+				$("#nowPlaying span").html(track.title);
+			}); //end SC.stream
 			
 			//play the selected song
 			me.playSong(trackID);
-			
-		});
-		
-	}
+		}); //end playlist button onclick function
+	} //end Jukebox "object"
 	
 	//play next song
 	Jukebox.prototype.playNext = function(){
-		
 		//try to play next song
 		this.currentlyPlayingIndex++;
-		
+										
 		//make sure there is a next song to play
-		if(this.currentlyPlayingIndex < this.playlist.children().length){
-			var nextElement = this.playlist.find("li").eq(this.currentlyPlayingIndex);
-			
+		if(this.currentlyPlayingIndex < $("#playlist div button").size()){
+			var nextElement = this.playlist.find("button").eq(this.currentlyPlayingIndex);
+												
 			//update the now playing HTML
-			$("#txtNow").html(nextElement.html());
+			$("#nowPlaying span").html(nextElement.html());
 			
 			//play the next song
 			this.playSong(nextElement.data("trackID"));
 		}
-		
-	} //end playNext function
+	} //end playNext prototype
 	
 	//play a song
 	Jukebox.prototype.playSong = function playSong(trackID){
-		
 		//store a reference to this object
 		var me = this;
 		
@@ -78,15 +71,20 @@
 				}
 			}); //end sound.play
 		}); //end SC.stream
-		
-	} //end playSong function
+	} //end playSong prototype
 	
 	//stop currently playing song
 	Jukebox.prototype.stop = function(){
 		if(this.currentlyPlayingSound){
-			this.currentlyPlayingSound.stop();
+			this.currentlyPlayingSound.pause();
 		}
-	}
+	} //end stop prototype
+	
+	Jukebox.prototype.resume = function(){		
+		if(this.currentlyPlayingSound.pause()){
+			this.currentlyPlayingSound.resume();
+		}
+	} //end pause prototype
 		
 	//export jukebox for everybody to use
 	window.Jukebox = Jukebox;

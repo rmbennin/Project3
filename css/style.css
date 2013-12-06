@@ -308,25 +308,106 @@ input {
 	text-shadow: 5px 5px 10px #000;
 }
 
-#playlist ul {
-	list-style-type: none;
+#playlist button {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	font-weight: bold;
+	color: #efefef;
+	display: inline-block;
+	margin: 10px auto;
+	padding: 7px 20px;
+	background: transparent;
 	cursor: pointer;
+	border: none;
+	margin-right: -60px;
+	
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent; 
+	border-left: 10px solid #469DB2;
+	border-right: 10px solid #469DB2;
 }
 
-#playlist li {
-	padding: 15px;
-	border-bottom: 1px solid transparent;
+#playlist button:hover, #playlist button:focus {
+	background: #1A1A1A;
+	border-top: 4px double #469DB2;
+	border-bottom: 4px double #469DB2;
 }
 
-#playlist li:hover {
-	border-bottom: 1px solid #000;
+#playlist #btnStop {
+	width: 17px;
+	height: 20px;
+	margin: 0px;
+	display: inline;
+	vertical-align: middle;
+	background: #469DB2;
+	padding: 0px;
+	border: 0px;
+} #playlist #btnStop:hover, #playlist #btnStop:focus {
+	background: #7BD0E5;
+	border: 1px solid #fff;
+	box-shadow: 0px 0px 20px #7BD0E5;
 }
 
-#playlist li:nth-child(2) {
-	border-bottom: 1px solid #000;
+#playlist #btnPlay {
+	display: inline;
+	vertical-align: middle;
+	margin: 0px;
+	
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-left: 13px solid #469DB2; 
+	
+	padding: 0px;
+} #playlist #btnPlay:hover, #playlist #btnPlay:focus {
+	border-left: 13px solid #7BD0E5;
+}
+
+#playlist #btnPause {
+	width: 27px;
+	height: 29px;
+	display: inline;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 20px;
+	vertical-align: middle;
+	margin: 0px;
+	background: #469DB2;
+	padding: 0px;
+	vertical-align: bottom;
+} #playlist #btnPause:hover, #playlist #btnPause:focus {
+	box-shadow: 0px 0px 20px #fff;
+	border: 1px solid #fff;
+}
+
+#playlist div span {
+	margin-right: 25px;
+	width: 35px;
+	padding: 7px 15px;
+	float: right;
+	color: #000;
+	border-radius: 180px;
+	text-align: center;
+	cursor: pointer;
+	border: 0px;
+	box-shadow: 3px 3px 10px #000;
+	
+	background-image: -ms-linear-gradient(top, #FFC289 0%, #B2753C 70%); /* IE10 Consumer Preview */ 
+	background-image: -moz-linear-gradient(top, #FFC289 0%, #B2753C 70%); /* Mozilla Firefox */ 
+	background-image: -o-linear-gradient(top, #FFC289 0%, #B2753C 70%); /* Opera */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFC289), color-stop(.7, #B2753C)); /* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-linear-gradient(top, #FFC289 0%, #B2753C 70%); /* Webkit (Chrome 11+) */ 
+	background-image: linear-gradient(to bottom, #FFC289 0%, #B2753C 70%); /* W3C Markup, IE10 Release Preview */ 
+}
+#playlist div span:hover {
+	box-shadow: 3px 3px 5px #000;
+	
+	background-image: -ms-linear-gradient(top, #F1E3B0 0%, #B2753C 70%); /* IE10 Consumer Preview */ 
+	background-image: -moz-linear-gradient(top, #F1E3B0 0%, #B2753C 70%); /* Mozilla Firefox */ 
+	background-image: -o-linear-gradient(top, #F1E3B0 0%, #B2753C 70%); /* Opera */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F1E3B0), color-stop(.7, #B2753C)); /* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-linear-gradient(top, #F1E3B0 0%, #B2753C 70%); /* Webkit (Chrome 11+) */ 
+	background-image: linear-gradient(to bottom, #F1E3B0 0%, #B2753C 70%); /* W3C Markup, IE10 Release Preview */
 }
 
 /*=======================================================FOOTER=======================================================*/
